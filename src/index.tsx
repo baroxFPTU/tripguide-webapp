@@ -6,11 +6,19 @@ import Home from './pages/Home';
 
 import 'styles/index.scss';
 import PageNotFound from 'pages/PageNotFound';
+import MainLayout from 'components/layouts/MainLayout';
 
 const router = (
   <Router>
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route
+        path='/'
+        element={
+          <MainLayout>
+            <Home />
+          </MainLayout>
+        }
+      />
       <Route path='*' element={<PageNotFound />} />
     </Routes>
   </Router>
