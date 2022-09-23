@@ -1,0 +1,29 @@
+@import 'settings';
+
+h3 {
+  font-size: $h3-font_size;
+  line-height: $h3-line_height;
+  letter-spacing: $h3-spacing;
+  font-weight: $h3-weight;
+}
+
+h4 {
+  font-size: $h4-font_size;
+  line-height: $h4-line_height;
+  letter-spacing: $h4-spacing;
+  font-weight: $h4-weight;
+}
+
+.caption-medium {
+  font-size: $caption_medium-font_size;
+  line-height: $caption_medium-line_height;
+  letter-spacing: $caption_medium-spacing;
+  font-weight: $caption_medium-weight;
+}
+
+.caption-regular {
+  font-size: $caption_regular-font_size;
+  line-height: $caption_regular-line_height;
+  letter-spacing: $caption_regular-spacing;
+  font-weight: $caption_regular-weight;
+}

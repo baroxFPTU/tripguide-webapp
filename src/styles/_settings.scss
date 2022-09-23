@@ -2,6 +2,9 @@
  * Typography styles
  */
 
+$app-font_family-primary: 'DM Sans', sans-serif;
+$app-font_family-secondary: 'Poppins', sans-serif;
+
 $hero-font_size: 80px;
 $hero-line_height: 100px;
 $hero-spacing: -0.5%;
@@ -78,3 +81,19 @@ $button_small-weight: 700;
 /**
  * #END Typography styles
  */
+
+/**
+  * Colors
+  */
+
+$blue-primary: #326bff;
+$blue-primary-800: #5a89ff;
+$blue-primary-600: #83a7ff;
+$blue-primary-400: #aec4fe;
+$blue-primary-200: #d6e1ff;
+
+/**
+ * Spacing
+ */
+
+$app-gap-x: 24px;
