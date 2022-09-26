@@ -12,6 +12,7 @@ interface IButtonProps {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   noPadding?: boolean;
+  [key: string]: any;
 }
 
 const StyledButton = styled.button<IStyledButtonProps>`
@@ -31,9 +32,9 @@ const StyledButton = styled.button<IStyledButtonProps>`
   }
 `;
 
-const Button = ({ children, leftIcon, rightIcon, noPadding }: IButtonProps) => {
+const Button = ({ children, leftIcon, rightIcon, noPadding, ...props }: IButtonProps) => {
   return (
-    <StyledButton noPadding={noPadding || false}>
+    <StyledButton noPadding={noPadding || false} {...props}>
       {leftIcon && leftIcon}
       {children}
       {rightIcon && rightIcon}
