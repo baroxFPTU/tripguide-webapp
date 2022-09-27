@@ -1,15 +1,21 @@
 import Section, { SectionItem } from 'components/common/Section';
 import bgImageUrl from 'assets/images/hero-bg.jpg';
+import BookingWidget from 'features/booking/components/BookingWidget';
 
 function Home() {
   return (
     <div className='Home'>
       <Section bgImageUrl={bgImageUrl}>
-        <SectionItem.Heading>Book With Us And Enjoy your Journey!</SectionItem.Heading>
+        <SectionItem.HeroHeading position='left' style={{ marginBottom: '80px' }}>
+          Book With Us <br /> And Enjoy your <br /> Journey!
+        </SectionItem.HeroHeading>
+        <BookingWidget />
       </Section>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a placeat natus debitis mollitia
-      vitae maiores voluptas repellendus, totam enim facere sequi repellat libero adipisci possimus
-      excepturi. Doloribus, veritatis impedit?
+      <Section>
+        <SectionItem.Heading position='center'>
+          Search a best place in the world
+        </SectionItem.Heading>
+      </Section>
     </div>
   );
 }

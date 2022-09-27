@@ -11,6 +11,7 @@ const DropdownMenuWrapper = styled.div.attrs({
   position: absolute;
   top: calc(100% + 12px);
   right: 0;
+  z-index: 99;
 
   display: none;
   width: 250px;
@@ -18,7 +19,7 @@ const DropdownMenuWrapper = styled.div.attrs({
   padding: 12px;
 
   border-radius: 12px;
-  box-shadow: -1px 9px 14px 0px #e9eaee;
+  box-shadow: 8px 28px 50px -13px rgba(0, 0, 0, 0.1);
   background: #fff;
 
   overflow-y: auto;

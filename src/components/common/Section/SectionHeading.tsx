@@ -1,20 +1,30 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { ReactComponentElement } from 'react';
+import styled, { StyledComponent } from 'styled-components';
 
-interface ISectionHeadingProps {
+export interface IStyledHeadingProps {
+  position?: 'left' | 'right' | 'center';
+}
+export interface ISectionHeadingProps extends IStyledHeadingProps {
   children?: React.ReactNode;
+  [key: string]: any;
 }
 
-const StyledSectionHeading = styled.h2`
-  font-size: 80px;
-  line-height: 100px;
-  letter-spacing: -0.5%;
-  font-weight: 700;
-  color: #3b3e45;
-  max-width: 70%;
-`;
+export function applyHeadingStyled(Component: any) {
+  return styled(Component)<IStyledHeadingProps>`
+    text-align: ${(props) => props.position};
+    width: 100%;
+  `;
+}
 
-export const SectionHeading = (props: ISectionHeadingProps) => {
-  const { children } = props;
-  return <StyledSectionHeading>{children}</StyledSectionHeading>;
+const StyledSectionHeading = applyHeadingStyled(styled.h2<ISectionHeadingProps>`
+  color: #3b3e45;
+  font-size: 48px;
+`);
+
+export const SectionHeading = ({ children, position, ...props }: ISectionHeadingProps) => {
+  return (
+    <StyledSectionHeading position={position} {...props}>
+      {children}
+    </StyledSectionHeading>
+  );
 };
