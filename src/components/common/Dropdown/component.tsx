@@ -1,6 +1,4 @@
 import React from 'react';
-import { MdArrowDropDown } from 'react-icons/md';
-
 import * as Styled from './styles';
 
 interface IDropdown {
@@ -13,10 +11,9 @@ interface IDropdownLabel {
   [key: string]: any;
 }
 
-const Dropdown = (props: IDropdown) => {
-  const { children, dropdownIcon: DropdownIcon } = props;
+const Dropdown = ({ children, dropdownIcon: DropdownIcon, ...props }: IDropdown) => {
   return (
-    <Styled.Dropdown rightIcon={DropdownIcon} noPadding>
+    <Styled.Dropdown rightIcon={DropdownIcon} noPadding {...props}>
       {children}
     </Styled.Dropdown>
   );

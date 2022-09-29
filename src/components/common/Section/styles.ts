@@ -23,14 +23,15 @@ export const Section = styled.section<ISectionProps>`
 `;
 
 export const SectionWrapper = styled.div`
-  width: 100%;
-  min-height: 70vh;
-  max-width: calc(100% - 180px * 2);
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  width: 100%;
+  min-height: 70vh;
+  max-width: 1521px;
+  padding: 0 24px;
 
   margin: 0 auto;
 
