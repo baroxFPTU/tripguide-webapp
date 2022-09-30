@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface IDropdownMenuProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const DropdownMenuWrapper = styled.div.attrs({

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import Dropdown from 'components/common/Dropdown';
 
 export const BookingWidget = styled.div`
+  display: flex;
   width: 100%;
-  min-height: 300px;
-  padding: 28px 64px;
+  padding: 34px 64px;
   margin-bottom: -230px;
   border-radius: 24px;
   box-shadow: 7px 28px 50px -13px rgba(0, 0, 0, 0.1);
@@ -22,19 +22,18 @@ export const BookingWidgetHeader = styled.header.attrs({ className: 'BookingWidg
 export const BookingWidgetTabList = styled.div.attrs({ className: 'BookingWidgetTabList' })`
   display: flex;
   align-items: center;
-  column-gap: 24px;
-  margin-bottom: -4px;
+  column-gap: 28px;
+  margin-bottom: -2px;
 `;
 
 export const TabListButton = styled.button.attrs({ className: 'TabListButton' })`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 0 12px 24px 12px; */
-  padding-bottom: 24px;
+  padding-bottom: 28px;
 
   color: #8e94a4;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 
   &[data-selected='true'] {
@@ -43,7 +42,7 @@ export const TabListButton = styled.button.attrs({ className: 'TabListButton' })
   }
 
   & .TabIcon {
-    margin-right: 10px;
+    margin-right: 8px;
     font-size: 1.5rem;
   }
 `;
@@ -62,4 +61,10 @@ export const CustomizeDropdown = styled(Dropdown).attrs({ className: 'DropdownIt
   margin-bottom: 12px;
   font-weight: 700;
   color: #434345;
+`;
+
+export const BookingWidgetPanel = styled.div`
+  display: flex;
+  column-gap: 10px;
+  margin-top: 28px;
 `;

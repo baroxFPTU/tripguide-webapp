@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styled from './styled';
+import * as Styled from './styles';
 import { RiHotelBedFill } from 'react-icons/ri';
 import { MdFlightTakeoff, MdDirectionsCar } from 'react-icons/md';
 

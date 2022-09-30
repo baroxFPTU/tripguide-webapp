@@ -2,7 +2,7 @@ import React from 'react';
 
 import BookingWidgetDropdownList from './BookingWidgetDropdownList';
 import BookingWidgetTabList from './BookingWidgetTabList';
-import * as Styled from './styled';
+import * as Styled from './styles';
 
 const BookingWidgetHeader = () => {
   return (

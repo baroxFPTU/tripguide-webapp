@@ -19,3 +19,19 @@ export const Dropdown = styled(Button)`
     background: #e9eaee;
   }
 `;
+
+export const DropdownLabel = styled.label.attrs({ className: 'DropdownLabel' })`
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  color: #434345;
+`;
+
+export const DropdownPlaceholder = styled.p`
+  color: #a5a9b5;
+  margin-top: 8px;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+`;

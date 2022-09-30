@@ -1,26 +1,33 @@
 import React from 'react';
+import { DropdownLabel } from './DropdownLabel';
+import { DropdownPlaceholder } from './DropdownPlaceholder';
 import * as Styled from './styles';
 
 interface IDropdown {
-  children: React.ReactNode;
+  label?: string;
+  placeholder?: string;
   dropdownIcon?: React.ReactNode;
-}
-
-interface IDropdownLabel {
   children: React.ReactNode;
-  [key: string]: any;
 }
 
-const Dropdown = ({ children, dropdownIcon: DropdownIcon, ...props }: IDropdown) => {
+const Dropdown = ({
+  label,
+  placeholder,
+  dropdownIcon: DropdownIcon,
+  children,
+  ...props
+}: IDropdown) => {
   return (
     <Styled.Dropdown rightIcon={DropdownIcon} noPadding {...props}>
+      {(label || placeholder) && (
+        <div className='DropdownShowing'>
+          {label && <DropdownLabel>{label}</DropdownLabel>}
+          {placeholder && <DropdownPlaceholder>{placeholder}</DropdownPlaceholder>}
+        </div>
+      )}
       {children}
     </Styled.Dropdown>
   );
-};
-
-export const DropdownLabel = ({ children, ...props }: IDropdownLabel) => {
-  return <span {...props}>{children}</span>;
 };
 
 export default Dropdown;
