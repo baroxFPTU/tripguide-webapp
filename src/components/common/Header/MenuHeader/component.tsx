@@ -3,9 +3,9 @@ import { BiBell } from 'react-icons/bi';
 import { MdArrowDropDown } from 'react-icons/md';
 
 import AmeriaFlag from 'assets/flags/america-flag.png';
-import Button from '../../Button';
 import Avatar from '../../Avatar/component';
 import * as Styled from './styles';
+import Dropdown, { DropdownItem } from 'components/common/Dropdown';
 
 const MenuHeader = () => {
   return (
@@ -16,23 +16,16 @@ const MenuHeader = () => {
           <img src={AmeriaFlag} alt='' />
         </div>
       </Styled.CountryButton>
-      <Styled.DropdownButton noPadding>
+      <Dropdown>
         <BiBell className='noti-icon' />
-        <Styled.DropdownMenuWrapper className='dropdown_menu'>
-          Dropdown Menu
-        </Styled.DropdownMenuWrapper>
-      </Styled.DropdownButton>
+        <DropdownItem.Menu>Test</DropdownItem.Menu>
+      </Dropdown>
       <Styled.VerticalSeperator />
-      <Styled.DropdownButton
-        rightIcon={<MdArrowDropDown className='btn_dropdown-icon' />}
-        noPadding
-      >
+      <Dropdown dropdownIcon={<MdArrowDropDown className='btn_dropdown-icon' />}>
         <Avatar />
-        <span className='btn_dropdown_name'>Delowar</span>
-        <Styled.DropdownMenuWrapper className='dropdown_menu'>
-          Dropdown Menu
-        </Styled.DropdownMenuWrapper>
-      </Styled.DropdownButton>
+        <DropdownItem.Label className='btn_dropdown_name'>Test</DropdownItem.Label>
+        <DropdownItem.Menu>Test</DropdownItem.Menu>
+      </Dropdown>
     </Styled.MenuHeaderWrapper>
   );
 };

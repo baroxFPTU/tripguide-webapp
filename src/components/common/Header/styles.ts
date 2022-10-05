@@ -7,6 +7,8 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
   padding: 20px 36px;
 
+  max-width: 1720px;
+  margin: 0 auto;
   background: #fff;
   @media ${device.tablet} {
     padding: 18px 24px;

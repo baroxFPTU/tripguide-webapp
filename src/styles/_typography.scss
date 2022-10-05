@@ -1,5 +1,27 @@
 @import 'settings';
 
+h1 {
+  font-size: $h1-font_size;
+  line-height: $h1-line_height;
+  letter-spacing: $h1-spacing;
+  font-weight: $h1-weight;
+}
+
+h1.hero {
+  font-size: $hero-font_size;
+  line-height: $hero-line_height;
+  letter-spacing: $hero-spacing;
+  font-weight: $hero-weight;
+  font-family: $app-font_family-secondary;
+}
+
+h2 {
+  font-size: $h2-font_size;
+  line-height: $h2-line_height;
+  letter-spacing: $h2-spacing;
+  font-weight: $h2-weight;
+}
+
 h3 {
   font-size: $h3-font_size;
   line-height: $h3-line_height;

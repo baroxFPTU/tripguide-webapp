@@ -1,44 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
-import { device } from 'styles/main';
+import * as Styled from './styles';
 
-interface IStyledButtonProps {
-  noPadding: boolean;
-}
-
-interface IButtonProps {
+export interface IButtonProps {
+  variant?: 'solid' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   noPadding?: boolean;
+  hasIcon?: boolean;
   [key: string]: any;
 }
 
-const StyledButton = styled.button<IStyledButtonProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  column-gap: 12px;
-  flex-shrink: 1;
-
-  padding: ${(props) => (props.noPadding ? '0px' : '8px')};
-  min-width: 40px;
-  cursor: pointer;
-
-  @media ${device.mobileM} {
-    min-width: 26px;
-  }
-`;
-
-const Button = ({ children, leftIcon, rightIcon, noPadding, ...props }: IButtonProps) => {
+const Button = ({
+  children,
+  leftIcon,
+  rightIcon,
+  noPadding,
+  variant,
+  size,
+  hasIcon,
+  ...props
+}: IButtonProps) => {
   return (
-    <StyledButton noPadding={noPadding || false} {...props}>
+    <Styled.Button
+      noPadding={noPadding || false}
+      size={size || 'md'}
+      variant={variant || 'ghost'}
+      hasIcon={Boolean(leftIcon || rightIcon || hasIcon)}
+      {...props}
+    >
       {leftIcon && leftIcon}
       {children}
       {rightIcon && rightIcon}
-    </StyledButton>
+    </Styled.Button>
   );
 };
 
