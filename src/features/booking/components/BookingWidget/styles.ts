@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Dropdown from 'components/common/Dropdown';
+import Button from 'components/common/Button';
 
 export const BookingWidget = styled.div`
   display: flex;
@@ -63,8 +64,22 @@ export const CustomizeDropdown = styled(Dropdown).attrs({ className: 'DropdownIt
   color: #434345;
 `;
 
+export const SearchButton = styled(Button)`
+  align-self: end;
+  padding-top: 24px;
+  padding-bottom: 24px;
+`;
+
 export const BookingWidgetPanel = styled.div`
   display: flex;
   column-gap: 10px;
   margin-top: 28px;
+`;
+
+export const BookingWidgetLeft = styled.div`
+  flex: 1;
+`;
+export const BookingWidgetRight = styled.div`
+  margin-left: 46px;
+  display: flex;
 `;

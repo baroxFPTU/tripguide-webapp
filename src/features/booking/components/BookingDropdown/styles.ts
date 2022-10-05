@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const CustomizeDropdown = styled(Dropdown)`
   flex: 1;
   justify-content: start;
-  padding: 12px 24px;
+  padding: 10px 24px;
 
   border-radius: 8px;
   background: #f4f5f7;

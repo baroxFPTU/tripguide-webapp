@@ -3,9 +3,10 @@ import { DropdownLabel } from './DropdownLabel';
 import { DropdownPlaceholder } from './DropdownPlaceholder';
 import * as Styled from './styles';
 
-interface IDropdown {
+export interface IDropdown {
   label?: string;
   placeholder?: string;
+  noPadding?: boolean;
   dropdownIcon?: React.ReactNode;
   children: React.ReactNode;
 }
@@ -18,7 +19,7 @@ const Dropdown = ({
   ...props
 }: IDropdown) => {
   return (
-    <Styled.Dropdown rightIcon={DropdownIcon} noPadding {...props}>
+    <Styled.Dropdown noPadding {...props}>
       {(label || placeholder) && (
         <div className='DropdownShowing'>
           {label && <DropdownLabel>{label}</DropdownLabel>}
@@ -26,6 +27,7 @@ const Dropdown = ({
         </div>
       )}
       {children}
+      {DropdownIcon && DropdownIcon}
     </Styled.Dropdown>
   );
 };
