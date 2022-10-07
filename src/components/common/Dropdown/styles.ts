@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '../Button';
+import { device } from 'styles/main';
 import { IDropdown } from './component';
 
 export const Dropdown = styled.button<IDropdown>`
@@ -33,6 +33,13 @@ export const DropdownLabel = styled.label.attrs({ className: 'DropdownLabel' })`
   font-weight: 700;
   font-size: 20px;
   color: #434345;
+  white-space: nowrap;
+  @media ${device.mobileM} {
+    font-size: 15px;
+  }
+  @media ${device.mobileL} {
+    font-size: 18px;
+  }
 `;
 
 export const DropdownPlaceholder = styled.p`
@@ -41,4 +48,7 @@ export const DropdownPlaceholder = styled.p`
   display: block;
   text-align: left;
   font-size: 168x;
+  @media ${device.mobileM} {
+    font-size: 12px;
+  }
 `;

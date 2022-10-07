@@ -50,8 +50,10 @@ export const Button = styled.button<IButtonProps>`
   background-color: ${({ variant }) => handleButtonColorByVariant(variant)};
   border: ${({ variant }) => (variant === 'outline' ? '1px solid #5a89ff' : 'none')};
   border-radius: 8px;
+  width: 100%;
 
   color: ${({ variant }) => (variant === 'solid' ? '#fff' : '#727274')};
+  white-space: nowrap;
   font-weight: 700;
   text-align: center;
   cursor: pointer;

@@ -17,7 +17,7 @@ const BookingWidget = () => {
       </Styled.BookingWidgetLeft>
       <Styled.BookingWidgetRight>
         <Styled.SearchButton size='lg' variant='solid'>
-          Test
+          Search
         </Styled.SearchButton>
       </Styled.BookingWidgetRight>
     </Styled.BookingWidget>
