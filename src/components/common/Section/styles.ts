@@ -1,3 +1,4 @@
+import { ISectionDescriptionProps } from './SectionDescription';
 import { device } from './../../../styles/main';
 import styled from 'styled-components';
 import { ISectionProps } from './component';
@@ -41,4 +42,12 @@ export const SectionWrapper = styled.div`
   @media ${device.tablet} {
     max-width: 100%;
   }
+`;
+
+export const SectionDescription = styled.p<ISectionDescriptionProps>`
+  max-width: 50%;
+  margin-top: 24px;
+
+  text-align: ${(props) => props.position};
+  color: #8e94a4;
 `;

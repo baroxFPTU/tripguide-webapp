@@ -1,16 +1,16 @@
 import React from 'react';
+import { IAcceptAnyProps } from 'types/common';
 
 import * as Styled from './styles';
 
-export interface ISectionProps {
+export interface ISectionProps extends IAcceptAnyProps {
   bgImageUrl?: string;
   children?: React.ReactNode;
 }
 
-const Section = (props: ISectionProps) => {
-  const { bgImageUrl, children } = props;
+const Section = ({ bgImageUrl, children, ...props }: ISectionProps) => {
   return (
-    <Styled.Section bgImageUrl={bgImageUrl}>
+    <Styled.Section bgImageUrl={bgImageUrl} {...props}>
       <Styled.SectionWrapper>{children}</Styled.SectionWrapper>
     </Styled.Section>
   );

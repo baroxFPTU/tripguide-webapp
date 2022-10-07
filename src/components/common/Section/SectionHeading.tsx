@@ -1,5 +1,5 @@
-import React, { ReactComponentElement } from 'react';
-import styled, { StyledComponent } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 
 export interface IStyledHeadingProps {
   position?: 'left' | 'right' | 'center';
@@ -23,7 +23,7 @@ const StyledSectionHeading = applyHeadingStyled(styled.h2<ISectionHeadingProps>`
 
 export const SectionHeading = ({ children, position, ...props }: ISectionHeadingProps) => {
   return (
-    <StyledSectionHeading position={position} {...props}>
+    <StyledSectionHeading position={position || 'left'} {...props}>
       {children}
     </StyledSectionHeading>
   );
