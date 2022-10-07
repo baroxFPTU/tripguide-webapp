@@ -7,17 +7,20 @@ function Home() {
   return (
     <div className='Home'>
       <Section bgImageUrl={bgImageUrl}>
-        <SectionItem.HeroHeading position='left' style={{ marginBottom: '80px' }}>
+        <SectionItem.HeroHeading
+          position='left'
+          style={{ marginBottom: '80px', marginTop: '80px' }}
+        >
           Book With Us <br /> And Enjoy your <br /> Journey!
         </SectionItem.HeroHeading>
         <BookingWidget />
       </Section>
-      <Section>
+      {/* <Section>
         <SectionItem.Heading position='center'>
           Search a best place in the world
         </SectionItem.Heading>
         <Button>Test</Button>
-      </Section>
+      </Section> */}
     </div>
   );
 }

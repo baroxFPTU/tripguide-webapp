@@ -8,11 +8,14 @@ h1 {
 }
 
 h1.hero {
-  font-size: $hero-font_size;
+  font-size: clamp(48px, 7vw, $hero-font_size);
   line-height: $hero-line_height;
   letter-spacing: $hero-spacing;
   font-weight: $hero-weight;
   font-family: $app-font_family-secondary;
+  @media (max-width: 376px) {
+    font-size: 34px;
+  }
 }
 
 h2 {
