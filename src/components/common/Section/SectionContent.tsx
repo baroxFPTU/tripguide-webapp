@@ -7,6 +7,7 @@ interface ISectionContentProps {
 
 const StyledSectionContent = styled.div`
   margin-top: 48px;
+  width: 100%;
 `;
 
 export const SectionContent = ({ children }: ISectionContentProps) => {

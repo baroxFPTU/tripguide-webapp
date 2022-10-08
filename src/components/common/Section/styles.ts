@@ -9,6 +9,8 @@ export const Section = styled.section<ISectionProps>`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 60px;
+  margin-bottom: 60px;
   &:before {
     content: '';
     position: absolute;

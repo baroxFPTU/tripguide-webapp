@@ -5,7 +5,7 @@ import BookingWidget from 'features/booking/components/BookingWidget';
 
 const HeroSection = () => {
   return (
-    <Section bgImageUrl={bgImageUrl}>
+    <Section bgImageUrl={bgImageUrl} style={{ margin: 0 }}>
       <SectionItem.HeroHeading position='left' style={{ marginBottom: '80px', marginTop: '80px' }}>
         Book With Us <br /> And Enjoy your <br /> Journey!
       </SectionItem.HeroHeading>
